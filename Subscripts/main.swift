@@ -74,3 +74,16 @@ print(matrix[1, 0])
 
 //let someValue = matrix[2, 2]
 
+
+//MARK: Сабскрипты типа
+print("\n//Сабскрипты типа")
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars
+    static subscript (n: Int) -> Planet {
+        return Planet(rawValue: n)!
+    }
+}
+
+let mars = Planet[4]
+print(mars)
